@@ -1,0 +1,30 @@
+═══════════════════════════════════════════════════════════════════
+  BENCHMARK SUMMARY
+  Generated: Mon Dec  1 13:52:23 MST 2025
+═══════════════════════════════════════════════════════════════════
+
+Servers:
+  ConnectRPC: localhost:50051
+  Standard gRPC: localhost:50052
+
+Test Results:
+
+  - server-stream-2025-12-01T20-01-09-356Z.json
+  - server-stream-2025-12-01T20-45-17-836Z.json
+  - unary-2025-12-01T19-28-24-519Z.json
+  - unary-2025-12-01T19-37-16-698Z.json
+  - unary-2025-12-01T19-57-49-287Z.json
+  - unary-2025-12-01T20-39-39-688Z.json
+  - unary-2025-12-01T20-52-23-729Z.json
+
+═══════════════════════════════════════════════════════════════════
+
+Key Observations:
+
+1. Compare p95 latencies across all three protocols
+2. ConnectRPC (gRPC) should be similar to Standard gRPC
+3. Connect protocol may show different characteristics
+
+For detailed analysis, examine the JSON result files in:
+  /Users/steve/dev/github/nestjs-buf-connect/benchmarks/results/
+

@@ -1,0 +1,36 @@
+{
+  "timestamp": "2025-12-01T20:52:23.729Z",
+  "scenario": "all",
+  "testMode": "sequential",
+  "servers": {
+    "grpcConnect": "localhost:50051",
+    "grpcStandard": "localhost:50052"
+  },
+  "metrics": {
+    "grpcConnect": {
+      "latency": {
+        "avg": 0.438788716616415,
+        "min": 0,
+        "med": 0,
+        "max": 24,
+        "p90": 1,
+        "p95": 1,
+        "p99": 3
+      },
+      "errorRate": 0
+    },
+    "grpcStandard": {
+      "latency": {
+        "avg": 0.47939128191900954,
+        "min": 0,
+        "med": 0,
+        "max": 34,
+        "p90": 1,
+        "p95": 1,
+        "p99": 2
+      },
+      "errorRate": 0
+    }
+  },
+  "iterations": 846025
+}

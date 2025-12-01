@@ -1,0 +1,22 @@
+{
+  "name": "benchmarks",
+  "version": "1.0.0",
+  "description": "Benchmark suite for comparing ConnectRPC vs standard gRPC in NestJS",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "pnpm -r build",
+    "build:standard": "cd standard-grpc && pnpm build",
+    "build:connect": "cd ../examples/connect-example && pnpm build",
+    "start:standard": "cd standard-grpc && pnpm start",
+    "start:connect": "cd ../examples/connect-example && pnpm start",
+    "benchmark": "./k6/run-all.sh",
+    "benchmark:unary": "./k6/run-all.sh unary",
+    "benchmark:streaming": "./ghz/run-streaming.sh",
+    "benchmark:streaming:quick": "./ghz/run-streaming.sh quick",
+    "benchmark:all": "./k6/run-all.sh && ./ghz/run-streaming.sh"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1"
+  }
+}

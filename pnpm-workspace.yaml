@@ -2,6 +2,7 @@ packages:
   - packages/*
   - components/**
   - examples/**
+  - benchmarks/*
   - '!**/test/**'
 
 ignoredBuiltDependencies:
