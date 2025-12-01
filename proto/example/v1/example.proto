@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+package example.v1;
+
+// ExampleService demonstrates all four gRPC/ConnectRPC streaming patterns.
+// This service is used for both library testing and example applications.
+service ExampleService {
+  // Unary RPC: single request, single response
+  // The simplest RPC pattern, similar to a REST endpoint.
+  rpc SayHello(HelloRequest) returns (HelloResponse);
+
+  // Server streaming: single request, stream of responses
+  // Useful for real-time data feeds, large data transfers, or progress updates.
+  rpc ServerStream(StreamRequest) returns (stream StreamResponse);
+
+  // Client streaming: stream of requests, single response
+  // Useful for file uploads, aggregating data, or batch processing.
+  rpc ClientStream(stream StreamRequest) returns (StreamResponse);
+
+  // Bidirectional streaming: stream of requests, stream of responses
+  // Useful for real-time chat, collaborative editing, or interactive gaming.
+  rpc BidiStream(stream StreamRequest) returns (stream StreamResponse);
+}
+
+// HelloRequest is used for the unary SayHello RPC.
+message HelloRequest {
+  // Name of the person to greet
+  string name = 1;
+}
+
+// HelloResponse is returned by the unary SayHello RPC.
+message HelloResponse {
+  // The greeting message
+  string message = 1;
+  // Timestamp of when the greeting was generated (Unix milliseconds)
+  int64 timestamp = 2;
+}
+
+// StreamRequest is used for streaming RPCs.
+message StreamRequest {
+  // Data payload for the request
+  string data = 1;
+  // Count parameter (e.g., number of responses to generate)
+  int32 count = 2;
+}
+
+// StreamResponse is returned by streaming RPCs.
+message StreamResponse {
+  // Data payload in the response
+  string data = 1;
+  // Index of this response in the stream (0-based)
+  int32 index = 2;
+}

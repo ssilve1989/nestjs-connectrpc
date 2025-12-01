@@ -1,0 +1,16 @@
+packages:
+  - packages/*
+  - components/**
+  - examples/**
+  - '!**/test/**'
+
+ignoredBuiltDependencies:
+  - '@bufbuild/buf'
+
+minimumReleaseAge: 7200
+
+minimumReleaseAgeExclude:
+  - typescript
+
+onlyBuiltDependencies:
+  - '@nestjs/core'

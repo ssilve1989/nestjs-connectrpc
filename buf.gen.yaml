@@ -1,0 +1,17 @@
+version: v2
+clean: true
+plugins:
+  # Generate TypeScript for the library (used in tests)
+  - local: protoc-gen-es
+    out: packages/nestjs-buf-connect/src/gen
+    opt:
+      - target=ts
+
+  # Generate TypeScript for the example application
+  - local: protoc-gen-es
+    out: examples/connect-example/src/gen
+    opt:
+      - target=ts
+
+inputs:
+  - directory: proto
