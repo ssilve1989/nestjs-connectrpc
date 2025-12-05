@@ -7,9 +7,15 @@ plugins:
     opt:
       - target=ts
 
-  # Generate TypeScript for the example application
+  # Generate TypeScript for the example server application
   - local: protoc-gen-es
     out: examples/connect-example/src/gen
+    opt:
+      - target=ts
+
+  # Generate TypeScript for the ConnectRPC client example
+  - local: protoc-gen-es
+    out: examples/connect-client/src/gen
     opt:
       - target=ts
 

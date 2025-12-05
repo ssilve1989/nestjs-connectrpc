@@ -69,7 +69,9 @@ export class ExampleController {
    * Client Streaming: Receives multiple requests and returns a single response.
    */
   @GrpcStreamMethod('ExampleService', 'ClientStream')
-  clientStream(requests: Observable<StreamRequest>): Observable<StreamResponse> {
+  clientStream(
+    requests: Observable<StreamRequest>,
+  ): Observable<StreamResponse> {
     const subject = new Subject<StreamResponse>();
 
     const dataItems: string[] = [];

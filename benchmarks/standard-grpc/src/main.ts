@@ -15,7 +15,10 @@ async function bootstrap() {
       transport: Transport.GRPC,
       options: {
         package: 'example.v1',
-        protoPath: resolve(__dirname, '../../../proto/example/v1/example.proto'),
+        protoPath: resolve(
+          __dirname,
+          '../../../proto/example/v1/example.proto',
+        ),
         url: `0.0.0.0:${PORT}`,
       },
     },
