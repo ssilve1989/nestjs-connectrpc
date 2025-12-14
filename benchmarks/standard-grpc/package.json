@@ -6,9 +6,7 @@
   "type": "module",
   "main": "dist/main.js",
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/main.js",
-    "start:dev": "ts-node-dev --respawn src/main.ts"
+    "start": "tsx --watch src/main.ts"
   },
   "dependencies": {
     "@grpc/grpc-js": "^1.12.5",
@@ -21,7 +19,6 @@
   },
   "devDependencies": {
     "@types/node": "^24.10.1",
-    "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.3"
   }
 }

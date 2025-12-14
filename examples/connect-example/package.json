@@ -8,7 +8,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/main.js",
-    "start:dev": "ts-node-dev --respawn src/main.ts"
+    "start:dev": "tsc --watch src/main.ts"
   },
   "dependencies": {
     "@bufbuild/protobuf": "^2.10.1",
@@ -23,7 +23,6 @@
   },
   "devDependencies": {
     "@types/node": "^24.10.1",
-    "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.3"
   }
 }
