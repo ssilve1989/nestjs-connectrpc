@@ -27,7 +27,7 @@
     "@commitlint/prompt-cli": "^20.2.0",
     "@types/node": "^24.10.1",
     "husky": "^9.1.7",
-    "tsx": "^4.20.6",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "unplugin-swc": "^1.5.9",
     "vitest": "^4.0.16"
