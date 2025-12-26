@@ -9,7 +9,7 @@
     "start": "tsx --watch src/main.ts"
   },
   "dependencies": {
-    "@grpc/grpc-js": "^1.12.5",
+    "@grpc/grpc-js": "^1.14.3",
     "@grpc/proto-loader": "^0.8.0",
     "@nestjs/common": "^11.1.9",
     "@nestjs/core": "^11.1.9",
