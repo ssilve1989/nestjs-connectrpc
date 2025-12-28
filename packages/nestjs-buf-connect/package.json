@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "@nestjs/common": "^11.1.9",
-    "@nestjs/core": "^11.1.9",
+    "@nestjs/core": "^11.1.10",
     "@nestjs/microservices": "^11.1.9",
     "@nestjs/testing": "^11.1.9",
     "reflect-metadata": "^0.2.2",
