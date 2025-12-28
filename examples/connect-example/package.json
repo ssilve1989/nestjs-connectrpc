@@ -16,7 +16,7 @@
     "@connectrpc/connect-node": "^2.1.1",
     "@nestjs/common": "^11.1.9",
     "@nestjs/core": "^11.1.9",
-    "@nestjs/microservices": "^11.1.9",
+    "@nestjs/microservices": "^11.1.10",
     "nestjs-buf-connect": "workspace:*",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.2"
