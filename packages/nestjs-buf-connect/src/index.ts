@@ -20,9 +20,9 @@ export {
 // Interfaces and Types
 export {
   type BaseServerOptions,
-  type BufConnectPattern,
-  type BufConnectServerInstance,
-  type BufConnectServerOpts,
+  type ConnectRpcPattern,
+  type ConnectRpcServerInstance,
+  type ConnectRpcServerOpts,
   ConnectStreamingType,
   type Http2InsecureOptions,
   type Http2Options,
@@ -31,7 +31,7 @@ export {
   type Router,
   ServerProtocol,
 } from './connect.interfaces.js';
-export { BufConnectServerStrategy } from './connect.strategy.js';
+export { ConnectRpcServerStrategy } from './connect.strategy.js';
 
 // Store (for advanced usage)
 export { metadataStore } from './store.js';

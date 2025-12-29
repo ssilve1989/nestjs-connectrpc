@@ -123,7 +123,7 @@ connect-example/
 The server supports multiple protocols. Configure in `main.ts`:
 
 ```typescript
-new BufConnectServerStrategy({
+new ConnectRpcServerStrategy({
   protocol: ServerProtocol.HTTP2_INSECURE, // Development
   // protocol: ServerProtocol.HTTP2,       // Production with TLS
   port: 50051,

@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 import { NestFactory } from '@nestjs/core';
 import type { MicroserviceOptions } from '@nestjs/microservices';
-import { BufConnectServerStrategy, ServerProtocol } from 'nestjs-buf-connect';
+import { ConnectRpcServerStrategy, ServerProtocol } from 'nestjs-buf-connect';
 import { AppModule } from './app.module.js';
 
 const PORT = Number(process.env.PORT) || 50051;
@@ -11,7 +11,7 @@ async function bootstrap() {
   const app = await NestFactory.createMicroservice<MicroserviceOptions>(
     AppModule,
     {
-      strategy: new BufConnectServerStrategy({
+      strategy: new ConnectRpcServerStrategy({
         // Use HTTP/2 without TLS for development
         // In production, use HTTP2 with proper TLS certificates
         protocol: ServerProtocol.HTTP2_INSECURE,

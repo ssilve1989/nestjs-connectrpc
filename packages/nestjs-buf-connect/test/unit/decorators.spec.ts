@@ -24,6 +24,7 @@ describe('Decorators', () => {
   describe('ConnectService', () => {
     it('should register service in metadata store', () => {
       @ConnectService(mockServiceDescriptor)
+      // biome-ignore lint/correctness/noUnusedVariables: asserted via metadataStore
       class TestController {}
 
       expect(metadataStore.get('TestController')).toBe(mockServiceDescriptor);
@@ -34,9 +35,11 @@ describe('Decorators', () => {
       const service2 = { typeName: 'test.v1.Service2' } as never;
 
       @ConnectService(service1)
+      // biome-ignore lint/correctness/noUnusedVariables: asserted via metadataStore
       class Controller1 {}
 
       @ConnectService(service2)
+      // biome-ignore lint/correctness/noUnusedVariables: asserted via metadataStore
       class Controller2 {}
 
       expect(metadataStore.get('Controller1')).toBe(service1);

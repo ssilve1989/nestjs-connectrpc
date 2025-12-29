@@ -1,12 +1,12 @@
 import type { MessageHandler } from '@nestjs/microservices';
 import { describe, expect, it, vi } from 'vitest';
-import { BufConnectServerStrategy, ServerProtocol } from '../../src/index.js';
+import { ConnectRpcServerStrategy, ServerProtocol } from '../../src/index.js';
 
 // Helper to create a properly typed mock handler
 const createMockHandler = (): MessageHandler =>
   vi.fn().mockResolvedValue({}) as unknown as MessageHandler;
 
-describe('BufConnectServerStrategy', () => {
+describe('ConnectRpcServerStrategy', () => {
   const defaultOptions = {
     protocol: ServerProtocol.HTTP2_INSECURE,
     port: 50051,
@@ -16,7 +16,7 @@ describe('BufConnectServerStrategy', () => {
 
   describe('constructor', () => {
     it('should create instance with options', () => {
-      const strategy = new BufConnectServerStrategy(defaultOptions);
+      const strategy = new ConnectRpcServerStrategy(defaultOptions);
 
       expect(strategy).toBeDefined();
       expect(strategy.options).toEqual(defaultOptions);
@@ -28,7 +28,7 @@ describe('BufConnectServerStrategy', () => {
         protocol: ServerProtocol.HTTP,
       } as const;
 
-      const strategy = new BufConnectServerStrategy(httpOptions);
+      const strategy = new ConnectRpcServerStrategy(httpOptions);
 
       expect(strategy.options.protocol).toBe(ServerProtocol.HTTP);
     });
@@ -36,7 +36,7 @@ describe('BufConnectServerStrategy', () => {
 
   describe('addHandler', () => {
     it('should add handler to message handlers map', () => {
-      const strategy = new BufConnectServerStrategy(defaultOptions);
+      const strategy = new ConnectRpcServerStrategy(defaultOptions);
       const mockHandler = createMockHandler();
       const pattern = { service: 'Test', rpc: 'method' };
 
@@ -48,7 +48,7 @@ describe('BufConnectServerStrategy', () => {
     });
 
     it('should handle string patterns', () => {
-      const strategy = new BufConnectServerStrategy(defaultOptions);
+      const strategy = new ConnectRpcServerStrategy(defaultOptions);
       const mockHandler = createMockHandler();
       const pattern = 'test-pattern';
 
@@ -59,7 +59,7 @@ describe('BufConnectServerStrategy', () => {
     });
 
     it('should add multiple handlers', () => {
-      const strategy = new BufConnectServerStrategy(defaultOptions);
+      const strategy = new ConnectRpcServerStrategy(defaultOptions);
       const handler1 = createMockHandler();
       const handler2 = createMockHandler();
 
@@ -71,7 +71,7 @@ describe('BufConnectServerStrategy', () => {
     });
 
     it('should mark event handlers correctly', () => {
-      const strategy = new BufConnectServerStrategy(defaultOptions);
+      const strategy = new ConnectRpcServerStrategy(defaultOptions);
       const mockHandler = createMockHandler();
 
       strategy.addHandler('event-pattern', mockHandler, true);
@@ -87,7 +87,7 @@ describe('BufConnectServerStrategy', () => {
 
   describe('getHandlers', () => {
     it('should return empty map initially', () => {
-      const strategy = new BufConnectServerStrategy(defaultOptions);
+      const strategy = new ConnectRpcServerStrategy(defaultOptions);
 
       const handlers = strategy.getHandlers();
 
@@ -96,7 +96,7 @@ describe('BufConnectServerStrategy', () => {
     });
 
     it('should return all registered handlers', () => {
-      const strategy = new BufConnectServerStrategy(defaultOptions);
+      const strategy = new ConnectRpcServerStrategy(defaultOptions);
       const patterns = [
         { service: 'S1', rpc: 'm1' },
         { service: 'S2', rpc: 'm2' },

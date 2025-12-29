@@ -3,7 +3,7 @@ import type { ConnectRouter, ServiceImpl } from '@connectrpc/connect';
 import type { MessageHandler } from '@nestjs/microservices';
 import { lastValueFrom } from 'rxjs';
 import {
-  type BufConnectPattern,
+  type ConnectRpcPattern,
   ConnectStreamingType,
 } from '../connect.interfaces.js';
 import { metadataStore } from '../store.js';
@@ -52,7 +52,7 @@ export const createServiceHandlers = (
       streaming: streamingType,
       service,
       ...pattern
-    } = JSON.parse(key) as BufConnectPattern;
+    } = JSON.parse(key) as ConnectRpcPattern;
 
     if (!handler) continue;
 
@@ -160,7 +160,7 @@ export const createConnectMethodMetadata = ({
   service,
   key,
   method,
-}: CreateConnectMethodMetadataOptions): BufConnectPattern => ({
+}: CreateConnectMethodMetadataOptions): ConnectRpcPattern => ({
   service: service ?? target.constructor.name,
   rpc: method ?? key,
   streaming,

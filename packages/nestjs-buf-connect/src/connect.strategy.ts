@@ -4,9 +4,9 @@ import {
   type MessageHandler,
   Server,
 } from '@nestjs/microservices';
-import type { BufConnectServerOpts, Router } from './connect.interfaces.js';
+import type { ConnectRpcServerOpts, Router } from './connect.interfaces.js';
 import { addServicesToRouter, createServiceHandlers } from './router/router.js';
-import { BufConnectServer } from './server/server.js';
+import { ConnectRpcServer } from './server/server.js';
 
 /**
  * NestJS custom transport strategy for Connect RPC.
@@ -15,7 +15,7 @@ import { BufConnectServer } from './server/server.js';
  * @example
  * ```typescript
  * const app = await NestFactory.createMicroservice(AppModule, {
- *   strategy: new BufConnectServerStrategy({
+ *   strategy: new ConnectRpcServerStrategy({
  *     protocol: 'http2_insecure',
  *     port: 50051,
  *     serverOptions: {},
@@ -25,13 +25,13 @@ import { BufConnectServer } from './server/server.js';
  * await app.listen();
  * ```
  */
-class BufConnectServerStrategy
+class ConnectRpcServerStrategy
   extends Server
   implements CustomTransportStrategy
 {
-  #server: BufConnectServer | null = null;
+  #server: ConnectRpcServer | null = null;
 
-  constructor(public readonly options: BufConnectServerOpts) {
+  constructor(public readonly options: ConnectRpcServerOpts) {
     super();
   }
 
@@ -52,7 +52,7 @@ class BufConnectServerStrategy
 
   /**
    * Returns the underlying server instance.
-   * @returns The BufConnectServer instance or null if not started
+   * @returns The ConnectRpcServer instance or null if not started
    */
   unwrap<T>(): T {
     return this.#server as T;
@@ -69,7 +69,7 @@ class BufConnectServerStrategy
     try {
       // Create router and server after all handlers are registered
       const router = this.createRouter();
-      this.#server = new BufConnectServer(this.options, router);
+      this.#server = new ConnectRpcServer(this.options, router);
       await this.#server.startServer();
       callback();
     } catch (e: unknown) {
@@ -117,4 +117,4 @@ class BufConnectServerStrategy
   }
 }
 
-export { BufConnectServerStrategy };
+export { ConnectRpcServerStrategy };

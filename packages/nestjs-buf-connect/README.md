@@ -50,19 +50,19 @@ export class ExampleController {
 
 ### 3. Configure the Microservice
 
-In your `main.ts`, use the `BufConnectServerStrategy`.
+In your `main.ts`, use the `ConnectRpcServerStrategy`.
 
 ```typescript
 import { NestFactory } from '@nestjs/core';
 import { MicroserviceOptions } from '@nestjs/microservices';
-import { BufConnectServerStrategy } from 'nestjs-buf-connect';
+import { ConnectRpcServerStrategy } from 'nestjs-buf-connect';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.createMicroservice<MicroserviceOptions>(
     AppModule,
     {
-      strategy: new BufConnectServerStrategy({
+      strategy: new ConnectRpcServerStrategy({
         port: 8080,
         protocol: 'http2_insecure', // or 'http2', 'http'
       }),
@@ -86,7 +86,7 @@ bootstrap();
 
 ### Strategy Options
 
-The `BufConnectServerStrategy` accepts the following options:
+The `ConnectRpcServerStrategy` accepts the following options:
 
 - `port`: The port to listen on.
 - `protocol`: The protocol to use (`http`, `https`, `http2`, `http2_insecure`).

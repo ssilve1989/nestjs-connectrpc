@@ -2,7 +2,7 @@ import type { DescService } from '@bufbuild/protobuf';
 import { Controller } from '@nestjs/common';
 import { MessagePattern } from '@nestjs/microservices';
 import {
-  type BufConnectPattern,
+  type ConnectRpcPattern,
   ConnectStreamingType,
 } from './connect.interfaces.js';
 import { metadataStore } from './store.js';
@@ -23,7 +23,7 @@ const createPattern = (
   propertyKey: string,
   streaming: ConnectStreamingType,
   options?: ConnectMethodOptions,
-): BufConnectPattern => ({
+): ConnectRpcPattern => ({
   service: options?.service ?? target.constructor.name,
   rpc: options?.method ?? propertyKey,
   streaming,

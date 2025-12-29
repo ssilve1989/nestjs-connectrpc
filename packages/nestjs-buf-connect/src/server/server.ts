@@ -1,6 +1,6 @@
 import type {
-  BufConnectServerInstance,
-  BufConnectServerOpts,
+  ConnectRpcServerInstance,
+  ConnectRpcServerOpts,
   Router,
 } from '../connect.interfaces.js';
 import {
@@ -15,17 +15,17 @@ import {
  * This method is available in Node.js 18.2+ for HTTP servers and in HTTP/2 servers.
  */
 const hasCloseAllConnections = (
-  server: BufConnectServerInstance,
-): server is BufConnectServerInstance & { closeAllConnections: () => void } =>
+  server: ConnectRpcServerInstance,
+): server is ConnectRpcServerInstance & { closeAllConnections: () => void } =>
   server !== null &&
   typeof (server as { closeAllConnections?: unknown }).closeAllConnections ===
     'function';
 
-class BufConnectServer {
-  #instance: BufConnectServerInstance;
+class ConnectRpcServer {
+  #instance: ConnectRpcServerInstance;
 
   constructor(
-    public readonly options: BufConnectServerOpts,
+    public readonly options: ConnectRpcServerOpts,
     public readonly router: Router,
   ) {
     this.#instance = this.createServerInstance();
@@ -67,7 +67,7 @@ class BufConnectServer {
     });
   }
 
-  private createServerInstance(): BufConnectServerInstance {
+  private createServerInstance(): ConnectRpcServerInstance {
     switch (this.options.protocol) {
       case 'http':
         return createHttpServer(this.options, this.router);
@@ -83,4 +83,4 @@ class BufConnectServer {
   }
 }
 
-export { BufConnectServer };
+export { ConnectRpcServer };

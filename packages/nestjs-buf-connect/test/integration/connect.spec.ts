@@ -6,10 +6,10 @@ import { Test } from '@nestjs/testing';
 import { Observable } from 'rxjs';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import {
-  BufConnectServerStrategy,
   ConnectBidiStreaming,
   ConnectClientStreaming,
   ConnectMethod,
+  ConnectRpcServerStrategy,
   ConnectServerStreaming,
   ConnectService,
   ServerProtocol,
@@ -59,7 +59,7 @@ class IntegrationController {
   }
 }
 
-describe('Integration: BufConnectServerStrategy', () => {
+describe('Integration: ConnectRpcServerStrategy', () => {
   let app: INestMicroservice;
   const port = 50052;
 
@@ -69,7 +69,7 @@ describe('Integration: BufConnectServerStrategy', () => {
     }).compile();
 
     app = moduleRef.createNestMicroservice({
-      strategy: new BufConnectServerStrategy({
+      strategy: new ConnectRpcServerStrategy({
         port,
         protocol: ServerProtocol.HTTP2_INSECURE,
         serverOptions: {},

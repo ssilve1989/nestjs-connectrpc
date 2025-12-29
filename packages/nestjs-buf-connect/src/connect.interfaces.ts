@@ -65,13 +65,13 @@ export interface HttpsOptions extends BaseServerOptions {
   serverOptions: HttpsServerOptions;
 }
 
-export type BufConnectServerOpts =
+export type ConnectRpcServerOpts =
   | Http2InsecureOptions
   | Http2Options
   | HttpOptions
   | HttpsOptions;
 
-export type BufConnectServerInstance =
+export type ConnectRpcServerInstance =
   | HttpsServer
   | Http2SecureServer
   | Http2Server
@@ -80,7 +80,7 @@ export type BufConnectServerInstance =
 
 export type Router = (router: ConnectRouter) => void;
 
-export interface BufConnectPattern {
+export interface ConnectRpcPattern {
   rpc: string;
   service: string;
   streaming: ConnectStreamingType;
