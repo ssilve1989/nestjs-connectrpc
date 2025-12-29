@@ -23,3 +23,6 @@ updates:
       connect:
         patterns:
           - "@connectrpc/*"
+      nestjs:
+        patterns:
+          - "@nestjs/*"
