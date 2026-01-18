@@ -19,7 +19,7 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "@biomejs/biome": "^2.3.10",
-    "@bufbuild/buf": "^1.52.1",
+    "@bufbuild/buf": "^1.63.0",
     "@bufbuild/protoc-gen-es": "^2.10.2",
     "@commitlint/cli": "^20.2.0",
     "@commitlint/config-conventional": "^20.2.0",
