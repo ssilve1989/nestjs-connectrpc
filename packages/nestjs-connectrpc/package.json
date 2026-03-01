@@ -56,10 +56,10 @@
     "rxjs": "^7.8.1"
   },
   "devDependencies": {
-    "@nestjs/common": "^11.1.9",
-    "@nestjs/core": "^11.1.9",
-    "@nestjs/microservices": "^11.1.9",
-    "@nestjs/testing": "^11.1.9",
+    "@nestjs/common": "^11.1.14",
+    "@nestjs/core": "^11.1.14",
+    "@nestjs/microservices": "^11.1.14",
+    "@nestjs/testing": "^11.1.14",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.2",
     "@bufbuild/protobuf": "^2.11.0",
