@@ -23,7 +23,7 @@
     "@bufbuild/protoc-gen-es": "^2.11.0",
     "@commitlint/cli": "^20.5.0",
     "@commitlint/config-conventional": "^20.5.0",
-    "@commitlint/cz-commitlint": "^20.5.0",
+    "@commitlint/cz-commitlint": "^20.5.1",
     "@commitlint/prompt-cli": "^20.5.0",
     "@types/node": "^25.5.0",
     "@vitest/coverage-v8": "^4.0.18",
