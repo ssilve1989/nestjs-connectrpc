@@ -15,7 +15,7 @@
     "@connectrpc/connect": "^2.1.1",
     "@connectrpc/connect-node": "^2.1.1",
     "@nestjs/common": "^11.1.17",
-    "@nestjs/core": "^11.1.17",
+    "@nestjs/core": "^11.1.18",
     "@nestjs/microservices": "^11.1.17",
     "nestjs-connectrpc": "workspace:*",
     "reflect-metadata": "^0.2.2",
