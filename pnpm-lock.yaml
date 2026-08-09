@@ -88,11 +88,11 @@ importers:
         specifier: ^2.13.0
         version: 2.13.0
       '@connectrpc/connect':
-        specifier: ^2.1.1
-        version: 2.1.1(@bufbuild/protobuf@2.13.0)
+        specifier: ^2.1.2
+        version: 2.1.2(@bufbuild/protobuf@2.13.0)
       '@connectrpc/connect-node':
-        specifier: ^2.1.1
-        version: 2.1.1(@bufbuild/protobuf@2.13.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.13.0))
+        specifier: ^2.1.2
+        version: 2.1.2(@bufbuild/protobuf@2.13.0)(@connectrpc/connect@2.1.2(@bufbuild/protobuf@2.13.0))
     devDependencies:
       '@types/node':
         specifier: ^26.1.2
@@ -110,11 +110,11 @@ importers:
         specifier: ^2.13.0
         version: 2.13.0
       '@connectrpc/connect':
-        specifier: ^2.1.1
-        version: 2.1.1(@bufbuild/protobuf@2.13.0)
+        specifier: ^2.1.2
+        version: 2.1.2(@bufbuild/protobuf@2.13.0)
       '@connectrpc/connect-node':
-        specifier: ^2.1.1
-        version: 2.1.1(@bufbuild/protobuf@2.13.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.13.0))
+        specifier: ^2.1.2
+        version: 2.1.2(@bufbuild/protobuf@2.13.0)(@connectrpc/connect@2.1.2(@bufbuild/protobuf@2.13.0))
       '@nestjs/common':
         specifier: ^11.1.28
         version: 11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)
@@ -166,11 +166,11 @@ importers:
         specifier: ^2.13.0
         version: 2.13.0
       '@connectrpc/connect':
-        specifier: ^2.1.1
-        version: 2.1.1(@bufbuild/protobuf@2.13.0)
+        specifier: ^2.1.2
+        version: 2.1.2(@bufbuild/protobuf@2.13.0)
       '@connectrpc/connect-node':
-        specifier: ^2.1.1
-        version: 2.1.1(@bufbuild/protobuf@2.13.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.13.0))
+        specifier: ^2.1.2
+        version: 2.1.2(@bufbuild/protobuf@2.13.0)(@connectrpc/connect@2.1.2(@bufbuild/protobuf@2.13.0))
       '@nestjs/common':
         specifier: ^11.1.28
         version: 11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)
@@ -429,15 +429,15 @@ packages:
     resolution: {integrity: sha512-7zVFCDB2reMvJH5dmbKnOQPjZEvjdJTH8jc0U/PIPU1r3/+vf5pD1HlfitV2MWsWXrvu7u39iY1lyLUPOaN0Gw==}
     engines: {node: '>=22.12.0'}
 
-  '@connectrpc/connect-node@2.1.1':
-    resolution: {integrity: sha512-s3TfsI1XF+n+1z6MBS9rTnFsxxR4Rw5wmdEnkQINli81ESGxcsfaEet8duzq8LVuuCupmhUsgpRo0Nv9pZkufg==}
+  '@connectrpc/connect-node@2.1.2':
+    resolution: {integrity: sha512-+i/aAOpsI8sIx1mbYp6d99zvxaUSF6t/jP9Ux9maAmjsZPgmIQ3JuIeYi0zJIP9zlCnBlJjkpPosshCgdRuThQ==}
     engines: {node: '>=20'}
     peerDependencies:
       '@bufbuild/protobuf': ^2.7.0
-      '@connectrpc/connect': 2.1.1
+      '@connectrpc/connect': 2.1.2
 
-  '@connectrpc/connect@2.1.1':
-    resolution: {integrity: sha512-JzhkaTvM73m2K1URT6tv53k2RwngSmCXLZJgK580qNQOXRzZRR/BCMfZw3h+90JpnG6XksP5bYT+cz0rpUzUWQ==}
+  '@connectrpc/connect@2.1.2':
+    resolution: {integrity: sha512-MXkBijtcX09R10Eb6sFeIetc6w6746eio6xtfuyVOH7oQAacT1X0GzMIQFux6Qy8cq3W/T5qX5Bei8YbFtmRGA==}
     peerDependencies:
       '@bufbuild/protobuf': ^2.7.0
 
@@ -2345,12 +2345,12 @@ snapshots:
       conventional-commits-parser: 7.1.2
       picocolors: 1.1.1
 
-  '@connectrpc/connect-node@2.1.1(@bufbuild/protobuf@2.13.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.13.0))':
+  '@connectrpc/connect-node@2.1.2(@bufbuild/protobuf@2.13.0)(@connectrpc/connect@2.1.2(@bufbuild/protobuf@2.13.0))':
     dependencies:
       '@bufbuild/protobuf': 2.13.0
-      '@connectrpc/connect': 2.1.1(@bufbuild/protobuf@2.13.0)
+      '@connectrpc/connect': 2.1.2(@bufbuild/protobuf@2.13.0)
 
-  '@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.13.0)':
+  '@connectrpc/connect@2.1.2(@bufbuild/protobuf@2.13.0)':
     dependencies:
       '@bufbuild/protobuf': 2.13.0
 
