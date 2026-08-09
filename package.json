@@ -26,7 +26,7 @@
     "@commitlint/cz-commitlint": "^21.2.0",
     "@commitlint/prompt-cli": "^21.2.0",
     "@types/node": "^26.1.2",
-    "@vitest/coverage-v8": "^4.0.18",
+    "@vitest/coverage-v8": "^4.1.10",
     "husky": "^9.1.7",
     "tsx": "^4.21.0",
     "typescript": "^6.0.3",
