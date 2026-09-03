@@ -15,8 +15,8 @@ importers:
         specifier: ^1.72.0
         version: 1.72.0
       '@bufbuild/protoc-gen-es':
-        specifier: ^2.13.0
-        version: 2.13.0(@bufbuild/protobuf@2.13.0)
+        specifier: ^2.14.0
+        version: 2.14.0(@bufbuild/protobuf@2.14.0)
       '@commitlint/cli':
         specifier: ^20.5.0
         version: 20.5.0(@types/node@26.1.2)(conventional-commits-parser@6.4.0)(typescript@6.0.3)
@@ -85,14 +85,14 @@ importers:
   examples/connect-client:
     dependencies:
       '@bufbuild/protobuf':
-        specifier: ^2.13.0
-        version: 2.13.0
+        specifier: ^2.14.0
+        version: 2.14.0
       '@connectrpc/connect':
         specifier: ^2.1.1
-        version: 2.1.1(@bufbuild/protobuf@2.13.0)
+        version: 2.1.1(@bufbuild/protobuf@2.14.0)
       '@connectrpc/connect-node':
         specifier: ^2.1.1
-        version: 2.1.1(@bufbuild/protobuf@2.13.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.13.0))
+        version: 2.1.1(@bufbuild/protobuf@2.14.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.14.0))
     devDependencies:
       '@types/node':
         specifier: ^26.1.2
@@ -107,14 +107,14 @@ importers:
   examples/connect-example:
     dependencies:
       '@bufbuild/protobuf':
-        specifier: ^2.13.0
-        version: 2.13.0
+        specifier: ^2.14.0
+        version: 2.14.0
       '@connectrpc/connect':
         specifier: ^2.1.1
-        version: 2.1.1(@bufbuild/protobuf@2.13.0)
+        version: 2.1.1(@bufbuild/protobuf@2.14.0)
       '@connectrpc/connect-node':
         specifier: ^2.1.1
-        version: 2.1.1(@bufbuild/protobuf@2.13.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.13.0))
+        version: 2.1.1(@bufbuild/protobuf@2.14.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.14.0))
       '@nestjs/common':
         specifier: ^11.1.28
         version: 11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)
@@ -163,14 +163,14 @@ importers:
   packages/nestjs-connectrpc:
     devDependencies:
       '@bufbuild/protobuf':
-        specifier: ^2.13.0
-        version: 2.13.0
+        specifier: ^2.14.0
+        version: 2.14.0
       '@connectrpc/connect':
         specifier: ^2.1.1
-        version: 2.1.1(@bufbuild/protobuf@2.13.0)
+        version: 2.1.1(@bufbuild/protobuf@2.14.0)
       '@connectrpc/connect-node':
         specifier: ^2.1.1
-        version: 2.1.1(@bufbuild/protobuf@2.13.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.13.0))
+        version: 2.1.1(@bufbuild/protobuf@2.14.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.14.0))
       '@nestjs/common':
         specifier: ^11.1.28
         version: 11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)
@@ -328,21 +328,21 @@ packages:
     engines: {node: '>=12'}
     hasBin: true
 
-  '@bufbuild/protobuf@2.13.0':
-    resolution: {integrity: sha512-acq7c49vxfm1ggJ95P70TX7ABDM0vxr1SYD3BB0o0jnBLB4OAqeHyKuN+cD3w80gXEDQ2zxHpR6CUeA+O/aU9g==}
+  '@bufbuild/protobuf@2.14.0':
+    resolution: {integrity: sha512-C3UGsiCwSprE2NKIIFA3hCDlpXTMCAXRZuEVp88L1GY36Y41+rYL5fryE+nOFhp4p4JPQvdV8PQ4DWgHgeTE+w==}
 
-  '@bufbuild/protoc-gen-es@2.13.0':
-    resolution: {integrity: sha512-ylI1vrLksdnXrVZRs9xGxmrQxKGhUm6pPszv26kqBvNiO3qPTktk+hgfwbLISBY4M/reShkT2dFLGT9fbydBXg==}
-    engines: {node: '>=20'}
+  '@bufbuild/protoc-gen-es@2.14.0':
+    resolution: {integrity: sha512-/Rrui0BJWSRONiKGYzqWq9ivGN3+cYkmc47QWITufr7K6yDb8HfssuJUSQZeptyg/rHbHrfDzCUjzoJ2pwuafg==}
+    engines: {node: '>=22'}
     hasBin: true
     peerDependencies:
-      '@bufbuild/protobuf': 2.13.0
+      '@bufbuild/protobuf': 2.14.0
     peerDependenciesMeta:
       '@bufbuild/protobuf':
         optional: true
 
-  '@bufbuild/protoplugin@2.13.0':
-    resolution: {integrity: sha512-32eMChKaL/A8Hh5AfMmXSdnuyznN85uoEjoyWiWeRrvtQOtpqX/v1R9PDe0g9vMIgzznK9inMT3CUaal0kjLUQ==}
+  '@bufbuild/protoplugin@2.14.0':
+    resolution: {integrity: sha512-S0TvZhVtTEkZQRj2JsXBCXiib/b0+bLQtJCcn+hj9O/usgbcgxHn4D+ii22Ao3qj0/kKxVYeo7BtAI2dMk+iig==}
 
   '@commitlint/cli@20.5.0':
     resolution: {integrity: sha512-yNkyN/tuKTJS3wdVfsZ2tXDM4G4Gi7z+jW54Cki8N8tZqwKBltbIvUUrSbT4hz1bhW/h0CdR+5sCSpXD+wMKaQ==}
@@ -1122,8 +1122,8 @@ packages:
   '@types/node@26.1.2':
     resolution: {integrity: sha512-Vu4a5UFA9rIIFJ7rB/Vaafh9lrCQszopTCx6KjFboXTGQbPNasehVR5TEiithSDGyd1DEiUByggTZsg8jukeIg==}
 
-  '@types/node@26.2.0':
-    resolution: {integrity: sha512-5IviulTZeRNp2vAJ514cc/HUlY5nZ9fCbq9DMyC52BrhFZACo3nI0R7qBxhQmo/d27NFe96ur/b7Wwxklda+kg==}
+  '@types/node@26.4.0':
+    resolution: {integrity: sha512-faiGnoIrLH/V8cibOMEAZ8pMw6oXqSukl29ra4mN8GdaB2ZewzeaLj+INpV5N+Z1eKWzY+IzaIZH2EIR6YZRNQ==}
 
   '@types/wrap-ansi@3.0.0':
     resolution: {integrity: sha512-ltIpx+kM7g/MLRZfkbL7EsCEjfzCcScLpkg37eXEtx5kmrAKBkTJwd1GIAjDSL8wTpM6Hzn5YO4pSb91BEwu1g==}
@@ -1414,8 +1414,8 @@ packages:
   es-toolkit@1.50.0:
     resolution: {integrity: sha512-OyZKhUVvEep9ITEiwHn8GKnMRQIVqoSIX7WnRbkWgJkllCujilqP2rD0u979tkl8wqyc8ICwlc1UBVv/Sl1G6w==}
 
-  es-toolkit@1.51.0:
-    resolution: {integrity: sha512-zC2lQGkM7QX+Gm6iM3+WIdZJzthsEd14LvRNJneSO2hzyz/zNBENR8+YXWo1cKxgPBtV6ksPYHELbcwBRzmdCw==}
+  es-toolkit@1.52.0:
+    resolution: {integrity: sha512-XTNEJQh1tY1ZJVcf6ayP/2n4ZPyaHlW2FWs7xvw5ddPuhUVjLD3olQVQS7kf58JbAB48iL0uL/jerTrjtV3lDA==}
 
   esbuild@0.27.2:
     resolution: {integrity: sha512-HyNQImnsOC7X9PMNaCIeAm4ISCQXs5a5YasTXVliKv4uuBo1dKrG0A+uQS8M5eXjVMnLg3WgXaKvprHlFJQffw==}
@@ -2252,19 +2252,19 @@ snapshots:
       '@bufbuild/buf-win32-arm64': 1.72.0
       '@bufbuild/buf-win32-x64': 1.72.0
 
-  '@bufbuild/protobuf@2.13.0': {}
+  '@bufbuild/protobuf@2.14.0': {}
 
-  '@bufbuild/protoc-gen-es@2.13.0(@bufbuild/protobuf@2.13.0)':
+  '@bufbuild/protoc-gen-es@2.14.0(@bufbuild/protobuf@2.14.0)':
     dependencies:
-      '@bufbuild/protoplugin': 2.13.0
+      '@bufbuild/protoplugin': 2.14.0
     optionalDependencies:
-      '@bufbuild/protobuf': 2.13.0
+      '@bufbuild/protobuf': 2.14.0
     transitivePeerDependencies:
       - supports-color
 
-  '@bufbuild/protoplugin@2.13.0':
+  '@bufbuild/protoplugin@2.14.0':
     dependencies:
-      '@bufbuild/protobuf': 2.13.0
+      '@bufbuild/protobuf': 2.14.0
       '@typescript/vfs': 1.6.4(typescript@5.4.5)
       typescript: 5.4.5
     transitivePeerDependencies:
@@ -2383,7 +2383,7 @@ snapshots:
       '@commitlint/types': 21.2.0
       cosmiconfig: 9.0.2(typescript@6.0.3)
       cosmiconfig-typescript-loader: 6.3.0(@types/node@26.1.2)(cosmiconfig@9.0.2(typescript@6.0.3))(typescript@6.0.3)
-      es-toolkit: 1.51.0
+      es-toolkit: 1.52.0
       is-plain-obj: 4.1.0
       picocolors: 1.1.1
     transitivePeerDependencies:
@@ -2451,7 +2451,7 @@ snapshots:
     dependencies:
       '@commitlint/config-validator': 21.2.0
       '@commitlint/types': 21.2.0
-      es-toolkit: 1.51.0
+      es-toolkit: 1.52.0
       global-directory: 5.0.0
       resolve-from: 5.0.0
     optional: true
@@ -2479,14 +2479,14 @@ snapshots:
       conventional-commits-parser: 7.1.1
       picocolors: 1.1.1
 
-  '@connectrpc/connect-node@2.1.1(@bufbuild/protobuf@2.13.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.13.0))':
+  '@connectrpc/connect-node@2.1.1(@bufbuild/protobuf@2.14.0)(@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.14.0))':
     dependencies:
-      '@bufbuild/protobuf': 2.13.0
-      '@connectrpc/connect': 2.1.1(@bufbuild/protobuf@2.13.0)
+      '@bufbuild/protobuf': 2.14.0
+      '@connectrpc/connect': 2.1.1(@bufbuild/protobuf@2.14.0)
 
-  '@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.13.0)':
+  '@connectrpc/connect@2.1.1(@bufbuild/protobuf@2.14.0)':
     dependencies:
-      '@bufbuild/protobuf': 2.13.0
+      '@bufbuild/protobuf': 2.14.0
 
   '@conventional-changelog/git-client@2.6.0(conventional-commits-parser@6.4.0)':
     dependencies:
@@ -2950,7 +2950,7 @@ snapshots:
 
   '@types/mute-stream@0.0.4':
     dependencies:
-      '@types/node': 26.2.0
+      '@types/node': 26.4.0
 
   '@types/node@22.20.1':
     dependencies:
@@ -2960,7 +2960,7 @@ snapshots:
     dependencies:
       undici-types: 8.3.0
 
-  '@types/node@26.2.0':
+  '@types/node@26.4.0':
     dependencies:
       undici-types: 8.3.0
 
@@ -3270,7 +3270,7 @@ snapshots:
 
   es-toolkit@1.50.0: {}
 
-  es-toolkit@1.51.0:
+  es-toolkit@1.52.0:
     optional: true
 
   esbuild@0.27.2:
