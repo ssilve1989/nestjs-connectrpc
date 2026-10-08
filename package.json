@@ -18,7 +18,7 @@
   "author": "steven.m.silvestri@gmail.com",
   "license": "UNLICENSED",
   "devDependencies": {
-    "@biomejs/biome": "^2.5.9",
+    "@biomejs/biome": "^2.5.15",
     "@bufbuild/buf": "^1.72.0",
     "@bufbuild/protoc-gen-es": "^2.14.1",
     "@commitlint/cli": "^21.2.2",
